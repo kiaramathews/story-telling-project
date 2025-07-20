@@ -137,9 +137,11 @@
     </Scroller>
 </div>
 
+
 <style>
     .chart {
         width: 90%;
         margin: 0px auto;
     }
+
 </style>
