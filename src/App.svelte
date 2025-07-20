@@ -11,17 +11,20 @@
   import TestSection from "./sections/TestSection.svelte";
   import MovingImage from "./sections/MovingImage.svelte";
   import RedlineScroll from "./sections/RedlineScroll.svelte";
+  import ZoomSelection from "./sections/ZoomSelection.svelte";
+  import ZoomSelection2 from "./sections/ZoomSelection2.svelte";
 </script>
 
 <main>
   <TitleSection />
-  <MovingImage />
+  <ZoomSelection />
+  <ZoomSelection2 />
   <RightAlignedExample />
   <LeftAlignedExample />
   <ImageExample />
+  <MovingImage />
   
 
-  <IntersectionObserverSectionCard />
   <InteresectionObserverBasicExample />
   <IntersectionObserverAlertExample />
   <DisappearingDuckExample />
