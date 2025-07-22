@@ -3,8 +3,7 @@
    export let subtitle;
    export let scrollY = 0;
 
-   // Scroll-based fading logic
-   $: fadeAmount = Math.min(scrollY / 75, 1); // from 0 to 1
+   $: fadeAmount = Math.min(scrollY / 75, 1); 
    $: contentOpacity = 1 - fadeAmount;
    $: bg1Opacity = 1 - fadeAmount;
    $: bg2Opacity = fadeAmount;
@@ -55,7 +54,7 @@
 }
 
 .bg2 {
-   background-image: url('https://i.postimg.cc/h4sPVBy0/Untitled-design-13.png'); /* 🔁 Your new image */
+   background-image: url('https://i.postimg.cc/h4sPVBy0/Untitled-design-13.png'); 
 }
 
 
