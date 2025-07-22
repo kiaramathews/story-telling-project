@@ -99,8 +99,10 @@
     <div class="image-block">
         <img src="https://www.tba.org/userassets/TNBAR/TNBAR/userimages/fowlerrussell_redlining_janfeb22_final-4.jpg"/>
     </div>
+    <div class="text-block">
     <div class="header-style">
       <h2>"St. Louis is landlocked and weighted by history. Long-established in-groups have cliquish traditions. All that familiarity can leave us a little wary of the unknown. And because we’re so segregated, much is unknown."</h2>
+    </div>
     </div>
     <div class="image-block">
         <img src="https://www.epi.org/files/2014/st-louis-1942-protests.png">
