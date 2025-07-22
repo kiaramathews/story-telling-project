@@ -91,14 +91,6 @@
     <div class="image-block">
         <img src="https://richmondstandard.com/wp-content/uploads/2023/04/JimCrowMustGo.jpg"/>
     </div>
-    <div class="text-block">
-      <h2>Keep Scrolling</h2>
-      <p>Now you're entering the zoom range. Watch it grow.</p>
-    </div>
-    <div class="text-block">
-      <h2>Zoom Complete</h2>
-      <p>Zoom has finished. Image starts to scroll away now.</p>
-    </div>
     </div>
       <div class="image-container">
     <img

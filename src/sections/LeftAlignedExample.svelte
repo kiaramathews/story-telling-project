@@ -139,11 +139,11 @@
             <p>“Demographics and Disparities.” Think Health St. Louis, https://www.thinkhealthstl.org/demographicdata?id=1649&sectionId=940., “Home Loan Denial Rate.” City of St. Louis, https://www.stlouis-mo.gov/archives/resilience/equity/opportunity/financial-empowerment/home-loan-denial-rate.cfm., “Home Inequity: Race, Wealth, and Housing in St. Louis since 1940.”, Black Wealth Data Center, https://blackwealthdata.org/resources/library/Home-inequity%3A-race%2C-wealth%2C-and-housing-in-St.-Louis-since-1940.</p>
         </div>
     </div>
+</div>
 
 
   <div class="chart-container">
     <Chart bind:chart {options} highcharts={Highcharts} />
   </div>
-</div>
 </div>
 

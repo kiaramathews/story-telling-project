@@ -90,7 +90,7 @@
   <div class="text-content">
     <div class="text-block">
         <div class="header-style">
-      <h2>"In 1916, St. Louisans voted on a “reform” ordinance that would prevent anyone from buying a home in a neighborhood more than 75 percent occupied by another race.""</h2>
+      <h2>"In 1916, St. Louisans voted on a “reform” ordinance that would prevent anyone from buying a home in a neighborhood more than 75 percent occupied by another race."</h2>
       </div>
         <div class="body-style">
       <p>The citizen believed that since the Dred Scott case, more African American had been moving upstate to St. Louis and "taking their jobs" and lowering their home values. Therefore, they pushed this rule to be placed in hopes of controlling who can join their communities and even got people on their blocks to sign a paper ensuring they would never sell their property to a Black American. </p>
@@ -99,24 +99,8 @@
     <div class="image-block">
         <img src="https://www.tba.org/userassets/TNBAR/TNBAR/userimages/fowlerrussell_redlining_janfeb22_final-4.jpg"/>
     </div>
-    <div class="text-block">
-        <div class="header-style">
-      <h2>Keep Scrolling</h2>
-      </div>
-      <div class="body-style">
-      <p>Now you're entering the zoom range. Watch it grow.</p>
-      </div>
-    </div>
     <div class="image-block">
         <img src="https://www.epi.org/files/2014/st-louis-1942-protests.png">
-    </div>
-    <div class="text-block">
-        <div class="header-style">
-      <h2>Zoom Complete</h2>
-      </div>
-      <div class="body-style">
-      <p>Zoom has finished. Image starts to scroll away now.</p>
-      </div>
     </div>
   </div>
 </div>
