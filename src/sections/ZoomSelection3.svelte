@@ -93,7 +93,7 @@
       <h2>"In 1916, St. Louisans voted on a “reform” ordinance that would prevent anyone from buying a home in a neighborhood more than 75 percent occupied by another race.""</h2>
       </div>
         <div class="body-style">
-      <p>The </p>
+      <p>The citizen believed that since the Dred Scott case, more African American had been moving upstate to St. Louis and "taking their jobs" and lowering their home values. Therefore, they pushed this rule to be placed in hopes of controlling who can join their communities and even got people on their blocks to sign a paper ensuring they would never sell their property to a Black American. </p>
       </div>
     </div>
     <div class="image-block">
