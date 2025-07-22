@@ -25,4 +25,30 @@
   });
 </script>
 
-<img src="{currentImage}" alt="Slideshow" style="width: 100%; height: auto;" />
+<style>
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    font-family: 'Playfair Display', serif;
+    
+  }
+
+</style>
+
+<div class="slideshow-container">
+  <img src="{currentImage}" alt="Slideshow" style="width: 100%; height: auto;" />
+  <div class="center-text">Statistics</div>
+</div>

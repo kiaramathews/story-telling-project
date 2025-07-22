@@ -1,152 +1,132 @@
 <script>
-    import * as Highcharts from "highcharts";
-    import "highcharts/modules/exporting";
-    import { Chart } from "@highcharts/svelte";
-    import Scroller from "../lib/Scroller.svelte";
-    import ArticleText from "../lib/ArticleText.svelte";
+   import * as Highcharts from "highcharts";
+   import "highcharts/modules/exporting";
+   import { Chart } from "@highcharts/svelte";
+   const series = [
+     {
+         name: "White Americans",
+         data: [
+             [1989, 130100],
+             [2013, 134000],
+             [2016, 163000],
+             [2022, 287000],
+         ],
+         color: "white",
+     },
+     {
+         name: "Black Americans",
+         data: [
+             [1989, 7700],
+             [2013, 11200],
+             [2016, 16000],
+             [2022, 45000],
+         ],
+         color: "darkred",
+     }
+   ];
 
-    const series = [
-        {
-            name: "Group 1",
-            data: [
-                [1990, 3],
-                [2000, 4],
-                [2010, 1],
-                [2020, 1],
-            ],
-            color: "#8427c9",
-        },
-        {
-            name: "Group 2",
-            data: [
-                [1990, 2],
-                [2000, 5],
-                [2010, -2],
-                [2020, 2],
-            ],
-            color: "#ff99fc",
-        },
-        {
-            name: "Group 3",
-            data: [
-                [1990, 4],
-                [2000, 3],
-                [2010, 0],
-                [2020, 3],
-            ],
-            color: "#4096fa",
-        },
-    ];
+   let chart;
 
-    let chart;
-    let thirdSeriesVisible = false;
-
-    let options = {
-        chart: {
-            type: "spline",
-            backgroundColor: "#e3ff00",
-            borderColor: "#007052",
-            borderWidth: 5,
-            borderRadius: 20,
-        },
-        title: {
-            text: "Another Example Chart",
-        },
-        subtitle: {
-            text: "With a subtitle! And styling!",
-        },
-        series: [series[0], series[1]],
-    };
-
-    function toggleThirdSeries() {
-        const existingSeries = chart.series.find((s) => s.name === "Group 3");
-
-        if (existingSeries) {
-            existingSeries.remove();
-            thirdSeriesVisible = false;
-        } else {
-            chart.addSeries(series[2]);
-            thirdSeriesVisible = true;
-        }
-    }
+   let options = {
+     chart: {
+         type: "spline",
+         backgroundColor: "ffffff", 
+         borderColor: "#ffffff",
+         borderWidth: 1,
+     },
+     title: {
+         text: "White vs. Black Wealth in St. Louis",
+         style: {
+             color: "white"
+         }
+     },
+     xAxis: {
+         labels: { style: { color: "white" } },
+         lineColor: "white",
+         tickColor: "white"
+     },
+     yAxis: {
+         labels: { style: { color: "white" } },
+         title: { style: { color: "white" } },
+         gridLineColor: "gray"
+     },
+     legend: {
+         itemStyle: {
+             color: "white"
+         }
+     },
+     series: series
+   };
 </script>
 
-<div>
-    <Scroller layout="left">
-        {#snippet sticky()}
-            <div class="chart">
-                <Chart bind:chart {options} highcharts={Highcharts} />
-            </div>
-            <button on:click={toggleThirdSeries} class="toggle-button">
-                {thirdSeriesVisible ? "Remove Group 3" : "Add Group 3"}
-            </button>
-            <div>
-                <p>
-                    You can use Svelte to add and remove data from a Highcharts
-                    chart.
-                </p>
-                <p>
-                    When you click the button above, a third group is toggled in
-                    the chart. Check out the source code to see how it's done.
-                </p>
-                <p>
-                    <strong
-                        >🤔 How might you use other HTML elements, like
-                        checkboxes or radio buttons, in a similar way to filter
-                        data?</strong
-                    >
-                </p>
-            </div>
-        {/snippet}
+<style>
+  .scroller-section {
+    display: flex;
+    min-height: 300vh; 
+    background-color: black; 
+  }
 
-        {#snippet scrolly()}
-            <ArticleText>
-                You might notice that this basic template doesn't have certain
-                features that are common in scrollytelling.
-            </ArticleText>
+  .chart-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 57vw;
+    overflow: hidden;
+    background-image: url("https://tile.loc.gov/storage-services/service/pnp/ppem/00700/00711v.jpg");
+    background-size: cover;
+    background-position: center;
 
-            <ArticleText>
-                For example, you might want a component that doesn't feature a
-                sticky component at all. Or a component that is solely a sticky
-                component.
-            </ArticleText>
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-            <ArticleText>
-                You might also want to add more interactivity or gamify parts of
-                your scrollytelling piece.
-            </ArticleText>
+  .text-content {
+    width: 50vw;
+    padding: 4rem 2rem;
+    background: #090909;
+  }
 
-            <ArticleText>
-                <strong>
-                    It's up to you to research how to create the effects and
-                    functionality that you envision!
-                </strong>
-            </ArticleText>
-        {/snippet}
-    </Scroller>
+  .text-block {
+    margin-bottom: 50vh;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    color: white;
+  }
+
+  .header-style {
+    font-size: 2rem;
+  }
+
+  .body-style {
+    font-size: 1.3rem;
+  }
+  
+</style>
+
+<div class="scroller-section">
+  <div class="text-content">
+    <div class="text-block">
+      <div class="header-style">
+        <h2>The Average Income: $73,913 for white households vs. $38,795 for Black households</h2>
+      </div>
+      <div class="body-style">
+        <p>The average income for black households in the city of St. Louis is almost doubled by white households according to St.Louis-MO reaseachers.</p>
+      </div>
+    </div>
+    <div class="text-block">
+      <div class="header-style">
+      <h2>Median home value: For Black people in the St. Louis city area home value has dropped by over $39,000, from 1940 to 2016</h2>
+      </div>
+       <div class="body-style">
+      <p>According to an aricle on the BWDC website, the progressive home value decline dates all the way back to segregation in the 1940s. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <Chart bind:chart {options} highcharts={Highcharts} />
+  </div>
 </div>
 
-<style>
-    .chart {
-        width: 90%;
-        margin: 0px auto;
-    }
-
-    .toggle-button {
-        margin: 20px;
-        padding: 20px;
-        color: #007052;
-        background-color: #0bd956;
-        border: solid 2px #007052;
-        border-radius: 16px;
-        font-size: large;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 4px 0 #007052;
-    }
-
-    .toggle-button:active {
-        transform: translateY(2px);
-        box-shadow: 0 2px 0 #007052;
-    }
-</style>

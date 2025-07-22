@@ -3,20 +3,22 @@
    export let subtitle;
    export let scrollY = 0;
 
-   // Scroll-based fading logic
-   $: fadeAmount = Math.min(scrollY / 75, 1); // from 0 to 1
+ const fadeStart = 5500; 
+const fadeDuration = 300; 
+
+$: fadeAmount = Math.min(Math.max((scrollY - fadeStart) / fadeDuration, 0), 1);
+ 
    $: contentOpacity = 1 - fadeAmount;
    $: bg1Opacity = 1 - fadeAmount;
    $: bg2Opacity = fadeAmount;
 </script>
 
 <div class="title-card">
+   <div class="bg-layer bg3" style="opacity: {bg1Opacity}"></div>
+   <div class="bg-layer bg4" style="opacity: {bg2Opacity}"></div>
 
-   <div class="bg-layer bg1" style="opacity: {bg1Opacity}"></div>
-   <div class="bg-layer bg2" style="opacity: {bg2Opacity}"></div>
 
-
-   <div class="content" style="opacity: {contentOpacity}">
+   <div class="content">
        <h1>{title}</h1>
        <p>{subtitle}</p>
    </div>
@@ -39,40 +41,41 @@
 
 .bg-layer {
    position: absolute;
-   top: 0;
+   top: 2 rem;
    left: 0;
    width: 100%;
-   height: 100%;
+   height: 150%;
    background-size: cover;
    background-position: center;
    transition: opacity 0.5s ease;
    z-index: 0;
-   padding-bottom: 2rem;
 }
 
-.bg1 {
-   background-image: url('https://i.postimg.cc/vHSYSvdg/Untitled-design-14.png');
+.bg3 {
+   background-image: url('https://i.postimg.cc/pV45LzSb/Untitled-design-16.png');
 }
 
-.bg2 {
-   background-image: url('https://i.postimg.cc/h4sPVBy0/Untitled-design-13.png'); /* 🔁 Your new image */
+.bg4 {
+   background-image: url('https://i.postimg.cc/NF3KCvXf/Untitled-design-15.png'); 
 }
 
 
 .content {
-   position: relative;
-   bottom: 7rem; 
+   position: absolute;
+   top: 5rem;        
+   left: 50%;
+   transform: translateX(-50%);
    z-index: 1;
-   max-width: 400px;
-   padding: 2rem;
-   transition: opacity 1.5s ease-out;
+   max-width: 600px;
+
 }
 
+
 h1 {
-   font-size: 4rem;
+   font-size: 6rem;
    margin: 0;
-   color: #000000;
-   text-shadow: 3px 1px 0 #b3b3b3;
+   color: #070202;
+   text-shadow: 3px 1px 0 #807b7b;
 }
 
 p {

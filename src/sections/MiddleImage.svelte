@@ -1,9 +1,9 @@
 <script>
    import { onMount } from "svelte";
-   import TitleCard from "../lib/TitleCard.svelte";
+   import TitleCard from "../lib/MiddleImageCard.svelte";
 
-   const title = "THE IMPACT OF REDLINING";
-   const subtitle = "Follow the journey on how racially motivated housing boarders that have founded the economic world we live in today.";
+   const title = "REDLINING IN ST. LOUIS";
+   const subtitle = "Discover how redlining directly impacted the city of St. Louis ";
 
    let scrollY = 0;
 
